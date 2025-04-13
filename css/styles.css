@@ -1,0 +1,163 @@
+/* Estilos generales */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar fija con cambio de color en scroll */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con 50% de transparencia */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+}
+
+
+/* Al hacer scroll, aumenta la opacidad */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+}
+/* Aumentar el tamaño de los iconos de redes sociales */
+.navbar-nav .nav-link i {
+    font-size: 2rem; /* Ajusta el tamaño del icono */
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+.navbar-nav .nav-link:hover i {
+    transform: scale(1.3); /* Aumenta el tamaño del icono */
+    color: #0971e7; /* Cambia el color del icono (Ejemplo: dorado) */
+}
+
+/* Efecto al hacer clic */
+.navbar-nav .nav-link:active i {
+    transform: scale(1.1);
+    color: #FF4500; /* Rojo anaranjado al hacer clic */
+}
+
+
+/* Sección Inicio */
+#inicio {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn {
+    margin: 10px;
+}
+
+/* Secciones ocultas inicialmente */
+.d-none {
+    display: none;
+}
+
+/* Contacto */
+.list-inline-item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.list-inline-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* Fondo con GIF */
+#inicio {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Fondo GIF */
+#inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/Fondo2.gif') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+#typing-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem; /* Ajusta el tamaño según necesites */
+    font-weight: 700; /* Ajusta el grosor */
+    color: #000000; /* O el color que prefieras */
+}
+
+
+#Parrafo {
+    font-family: 'Bevan', serif;
+    font-size: 1rem; /* Ajusta el tamaño según necesites */
+    color: #000000; /* O el color que prefieras */
+}
+
+
+.btn-dark-gradient {
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    border: none;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.btn-dark-gradient:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+#BarraDeNavegacion{
+    font-family: 'Orbitron', sans-serif;
+}
+
+/*************** Seccion Programador ****************************/
+/* Estilos para los iconos de la barra de navegación */
+.skill-icon i {
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+    margin: 0 8px;
+}
+
+.skill-icon:hover i {
+    transform: scale(1.3);
+    color: #f8f9fa; /* Blanco al pasar el cursor */
+}
+
+/* Ocultar los iconos en pantallas pequeñas y mostrar en medianas/grandes */
+@media (max-width: 576px) {
+    .skill-icon {
+        display: none;
+    }
+}
+
+.navbar-nav .nav-link i {
+    font-size: 3rem; /* Ajusta según necesidad */
+    transition: transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover i {
+    transform: scale(1.2); /* Efecto al pasar el cursor */
+}
+
+.text-center{
+    font-family: 'Orbitron', sans-serif;
+}
+.card-title{
+    text-align: center;
+}
