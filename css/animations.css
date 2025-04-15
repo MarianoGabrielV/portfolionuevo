@@ -35,4 +35,26 @@
 }
 
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card .card-img-top {
+  height: 400px; /* o el alto que necesites */
+  object-fit: contain;
+  background: linear-gradient(135deg, #004e92, #000428); /* color de fondo para los bordes vacíos (opcional) */
+  padding: 10px; /* opcional, para que no toquen los bordes */
+}
+
+.project-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
   
