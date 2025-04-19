@@ -166,3 +166,37 @@ body {
     color: white !important;
 }
 
+/*Horizontal*/
+.project-card-horizontal {
+    background-color: #1e1e1e;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    border-radius: 1rem;
+    padding: 1rem;
+    min-height: 250px; /* Aumenta la altura mínima */
+}
+
+
+.project-card-horizontal:hover {
+    transform: scale(1.02);
+}
+
+.project-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto; /* Mantiene la proporción */
+    object-fit: contain; /* Evita recorte */
+    padding: 10px; /* Espacio alrededor si la imagen es más chica */
+}
+
+@media (min-width: 768px) {
+    .project-card-horizontal {
+        flex-direction: row;
+    }
+
+    .project-img {
+        margin-right: 20px;
+    }
+}
+
