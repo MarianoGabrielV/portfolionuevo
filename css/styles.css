@@ -200,3 +200,147 @@ body {
     }
 }
 
+/* Nuevos estilos para botones modernos */
+.btn-outline-light, .btn-outline-info {
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 12px 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+.btn-outline-info:hover {
+    background-color: #0dcaf0;
+    color: #000;
+    transform: scale(1.05);
+}
+
+#inicio h1, #inicio p {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+#inicio .btn {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Responsive text sizes */
+@media (max-width: 768px) {
+    #inicio h1 {
+        font-size: 2rem;
+    }
+    #inicio p {
+        font-size: 1rem;
+    }
+}
+
+/* Mejora del fondo animado */
+#inicio::before {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.5); /* Mejora legibilidad del texto sobre fondo */
+}
+
+
+.btn-wrapper {
+    width: 260px; /* Mismo ancho fijo para ambos */
+}
+
+@media (max-width: 768px) {
+    .btn-wrapper {
+        width: 100%; /* En móviles ocupan todo el ancho */
+    }
+}
+
+
+/* ============================
+   Estilos para programador.html
+   ============================ */
+
+/* Encabezado */
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-family: 'Bevan', serif;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Secciones */
+section h2 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 30px;
+    color: #0dcaf0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Tarjetas de formación y cursos */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Enlaces dentro de tarjetas */
+.card a {
+    color: #0dcaf0;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Proyectos */
+.project-card-horizontal {
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card-horizontal:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(13, 202, 240, 0.2);
+}
+
+.project-img {
+    width: 100%;
+    max-width: 280px;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    padding: 10px;
+}
+
+/* Experiencia */
+.bg-dark.text-white.p-4.rounded {
+    border-left: 4px solid #0dcaf0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-img {
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
