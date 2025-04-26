@@ -2,72 +2,43 @@
 body {
     background-color: #121212;
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Tipografía para títulos y navbar */
+h1, h2, h3, .navbar-brand, .text-center, .card-title {
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Navbar fija con cambio de color en scroll */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.5); /* Color negro con 50% de transparencia */
-    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
     transition: background-color 0.3s, backdrop-filter 0.3s;
 }
 
-
-/* Al hacer scroll, aumenta la opacidad */
 .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(8px);
 }
-/* Aumentar el tamaño de los iconos de redes sociales */
+
+/* Iconos de navegación */
 .navbar-nav .nav-link i {
-    font-size: 2rem; /* Ajusta el tamaño del icono */
-    transition: transform 0.3s, color 0.3s;
+    font-size: 2rem;
+    transition: transform 0.3s, filter 0.3s;
 }
 
-/* Efecto al pasar el cursor */
 .navbar-nav .nav-link:hover i {
-    transform: scale(1.3); /* Aumenta el tamaño del icono */
-    color: #0971e7; /* Cambia el color del icono (Ejemplo: dorado) */
+    transform: scale(1.2);
+    filter: brightness(1.2);
 }
 
-/* Efecto al hacer clic */
 .navbar-nav .nav-link:active i {
     transform: scale(1.1);
-    color: #FF4500; /* Rojo anaranjado al hacer clic */
+    color: #FF4500;
 }
 
-
-/* Sección Inicio */
-#inicio {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.btn {
-    margin: 10px;
-}
-
-/* Secciones ocultas inicialmente */
-.d-none {
-    display: none;
-}
-
-/* Contacto */
-.list-inline-item a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.list-inline-item a:hover {
-    text-decoration: underline;
-}
-
-
-/* Fondo con GIF */
+/* Fondo con GIF en Inicio */
 #inicio {
     position: relative;
     height: 100vh;
@@ -78,7 +49,6 @@ body {
     overflow: hidden;
 }
 
-/* Fondo GIF */
 #inicio::before {
     content: "";
     position: absolute;
@@ -88,23 +58,22 @@ body {
     height: 100%;
     background: url('../img/Fondo2.gif') no-repeat center center;
     background-size: cover;
+    filter: brightness(0.5);
     z-index: -1;
 }
 
 #typing-text {
     font-family: 'Orbitron', sans-serif;
-    font-size: 3rem; /* Ajusta el tamaño según necesites */
-    font-weight: 700; /* Ajusta el grosor */
-    color: #000000; /* O el color que prefieras */
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
 }
-
 
 #Parrafo {
-    font-family: 'Bevan', serif;
-    font-size: 1rem; /* Ajusta el tamaño según necesites */
-    color: #000000; /* O el color que prefieras */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #000000;
 }
-
 
 .btn-dark-gradient {
     background: linear-gradient(135deg, #1a1a1a, #333333);
@@ -122,12 +91,7 @@ body {
     transform: scale(1.05);
 }
 
-#BarraDeNavegacion{
-    font-family: 'Orbitron', sans-serif;
-}
-
-/*************** Seccion Programador ****************************/
-/* Estilos para los iconos de la barra de navegación */
+/*************** Sección Programador ****************************/
 .skill-icon i {
     font-size: 1.5rem;
     transition: transform 0.3s, color 0.3s;
@@ -136,10 +100,9 @@ body {
 
 .skill-icon:hover i {
     transform: scale(1.3);
-    color: #f8f9fa; /* Blanco al pasar el cursor */
+    color: #f8f9fa;
 }
 
-/* Ocultar los iconos en pantallas pequeñas y mostrar en medianas/grandes */
 @media (max-width: 576px) {
     .skill-icon {
         display: none;
@@ -147,26 +110,42 @@ body {
 }
 
 .navbar-nav .nav-link i {
-    font-size: 3rem; /* Ajusta según necesidad */
+    font-size: 3rem;
     transition: transform 0.3s;
 }
 
 .navbar-nav .nav-link:hover i {
-    transform: scale(1.2); /* Efecto al pasar el cursor */
+    transform: scale(1.2);
 }
 
-.text-center{
+.text-center {
     font-family: 'Orbitron', sans-serif;
 }
-.card-title{
+
+.card-title {
     text-align: center;
 }
+
 .text-muted {
     --bs-text-opacity: 1;
     color: white !important;
 }
 
-/*Horizontal*/
+/* Card de educación */
+.card-educacion {
+    background: linear-gradient(135deg, #004e92, #000428);
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-educacion:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Proyectos */
 .project-card-horizontal {
     background-color: #1e1e1e;
     border: none;
@@ -174,9 +153,8 @@ body {
     overflow: hidden;
     border-radius: 1rem;
     padding: 1rem;
-    min-height: 250px; /* Aumenta la altura mínima */
+    min-height: 250px;
 }
-
 
 .project-card-horizontal:hover {
     transform: scale(1.02);
@@ -185,9 +163,9 @@ body {
 .project-img {
     width: 100%;
     max-width: 300px;
-    height: auto; /* Mantiene la proporción */
-    object-fit: contain; /* Evita recorte */
-    padding: 10px; /* Espacio alrededor si la imagen es más chica */
+    height: auto;
+    object-fit: contain;
+    padding: 10px;
 }
 
 @media (min-width: 768px) {
@@ -200,7 +178,7 @@ body {
     }
 }
 
-/* Nuevos estilos para botones modernos */
+/* Botones modernos */
 .btn-outline-light, .btn-outline-info {
     font-weight: bold;
     border-radius: 30px;
@@ -224,10 +202,10 @@ body {
 #inicio h1, #inicio p {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
+
 #inicio .btn {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
 
 /* Responsive text sizes */
 @media (max-width: 768px) {
@@ -239,108 +217,25 @@ body {
     }
 }
 
-/* Mejora del fondo animado */
-#inicio::before {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(0.5); /* Mejora legibilidad del texto sobre fondo */
+/* Mejoras generales */
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-
-.btn-wrapper {
-    width: 260px; /* Mismo ancho fijo para ambos */
+.project-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
 }
 
-@media (max-width: 768px) {
-    .btn-wrapper {
-        width: 100%; /* En móviles ocupan todo el ancho */
-    }
+/* Animaciones de scroll */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
 }
 
-
-/* ============================
-   Estilos para programador.html
-   ============================ */
-
-/* Encabezado */
-header h1 {
-    font-family: 'Orbitron', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-header p {
-    font-family: 'Bevan', serif;
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-}
-
-/* Secciones */
-section h2 {
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 30px;
-    color: #0dcaf0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-}
-
-/* Tarjetas de formación y cursos */
-.card {
-    background-color: #1e1e1e;
-    border-radius: 1rem;
-    border: none;
-    color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.card-title {
-    font-family: 'Orbitron', sans-serif;
-}
-
-/* Enlaces dentro de tarjetas */
-.card a {
-    color: #0dcaf0;
-    text-decoration: none;
-}
-
-.card a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-/* Proyectos */
-.project-card-horizontal {
-    transition: transform 0.3s ease-in-out;
-}
-
-.project-card-horizontal:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(13, 202, 240, 0.2);
-}
-
-.project-img {
-    width: 100%;
-    max-width: 280px;
-    object-fit: contain;
-    border-radius: 0.5rem;
-    padding: 10px;
-}
-
-/* Experiencia */
-.bg-dark.text-white.p-4.rounded {
-    border-left: 4px solid #0dcaf0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .project-img {
-        max-width: 100%;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
 }

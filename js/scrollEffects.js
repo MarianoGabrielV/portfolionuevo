@@ -8,15 +8,23 @@ window.addEventListener("scroll", function () {
     }
 });
 
-// Detectar elementos con clase 'fade-in' y animarlos cuando aparecen en pantalla
+// Animar elementos con clase 'fade-in' cuando aparecen en pantalla
 document.addEventListener("DOMContentLoaded", function () {
-    let elements = document.querySelectorAll(".fade-in");
+    let fadeInElements = document.querySelectorAll(".fade-in");
+    let fadeUpElements = document.querySelectorAll(".fade-up");
 
     function checkVisibility() {
-        elements.forEach((element) => {
+        fadeInElements.forEach((element) => {
             let rect = element.getBoundingClientRect();
             if (rect.top < window.innerHeight - 100) {
                 element.classList.add("visible");
+            }
+        });
+
+        fadeUpElements.forEach((element) => {
+            let rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                element.classList.add("show");
             }
         });
     }
