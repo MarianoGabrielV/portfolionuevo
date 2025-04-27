@@ -1,9 +1,12 @@
 /* Estilos generales */
 body {
-    background-color: #121212;
+    background: url('../img/fondo.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #121212; /* Color de fondo por si la imagen no carga */
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
 }
+
 
 /* Tipografía para títulos y navbar */
 h1, h2, h3, .navbar-brand, .text-center, .card-title {
@@ -35,7 +38,11 @@ h1, h2, h3, .navbar-brand, .text-center, .card-title {
 
 .navbar-nav .nav-link:active i {
     transform: scale(1.1);
-    color: #FF4500;
+    color: #0dcaf0;
+}
+
+.navbar-toggler {
+    border-color: #0dcaf0; /* Color del borde del botón */
 }
 
 /* Fondo con GIF en Inicio */
@@ -238,4 +245,13 @@ section {
 .fade-up.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+.pro-navbar {
+    background-color: rgba(0, 0, 0, 0.4); /* Transparente */
+    backdrop-filter: blur(8px); /* Difuminado */
+    -webkit-backdrop-filter: blur(8px);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    padding: 10px 0;
 }
