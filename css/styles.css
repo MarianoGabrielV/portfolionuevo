@@ -162,6 +162,11 @@ h1, h2, h3, .navbar-brand, .text-center, .card-title {
     padding: 1rem;
     min-height: 250px;
 }
+.card-text,
+.descripcion-proyecto p {
+  font-family: 'Inter', sans-serif;
+}
+
 
 .project-card-horizontal:hover {
     transform: scale(1.02);
