@@ -39,25 +39,30 @@
     </nav>
 
     <!-- Sección de Presentación -->
-    <section id="inicio" class="text-center d-flex flex-column justify-content-center align-items-center px-3">
+    <section id="inicio" class="text-center d-flex flex-column justify-content-center align-items-center px-3" >
         <div class="p-4">
-            <h1 class="display-4 fw-bold text-white mb-3">
-                ¡Hola! Soy <br>
-                <span class="text-info">Mariano Vergniaud</span>
+            <h1 class="display-4 fw-bold text-white mb-3" data-en='Hello! I&apos;m <br><span class="text-info">Mariano Vergniaud</span>'
+                data-es='¡Hola! Soy <br><span class="text-info">Mariano Vergniaud</span>'>
+                        Hello! I'm <br>
+                <span class="text-info" data-en="Mariano Vergniaud" data-es="Mariano Vergniaud">Mariano Vergniaud</span>
               </h1>              
-            <p class="lead text-white mb-4">
-                Desarrollador web 💻 y analista de datos 📊.<br class="d-block">
-                Elegí el perfil que mejor se adapte a lo que buscás.
-              </p>              
+            <p class="lead text-white mb-4"  data-en='Web Developer 💻 and Data Analyst 📊.<br class="d-block">Choose the profile that best suits what you&apos;re looking for.'
+                data-es='Desarrollador Web 💻 y Analista de Datos 📊.<br class="d-block">Elegí el perfil que mejor se adapte a lo que buscás.'>
+                Web Developer 💻 and Data Analyst 📊.<br class="d-block">
+                Choose the profile that best suits what you're looking for.
+                </p>
+                            
               <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-                <div class="btn-wrapper">
+                <div class="btn-wrapper"data-en='<a href="programador.html" class="btn btn-outline-light btn-lg w-100"><i class="fas fa-code me-2"></i> Programmer Profile</a>'
+                    data-es='<a href="programador.html" class="btn btn-outline-light btn-lg w-100"><i class="fas fa-code me-2"></i> Perfil de Programador</a>'>
                   <a href="programador.html" class="btn btn-outline-light btn-lg w-100">
-                    <i class="fas fa-code me-2"></i> Perfil de Programador
+                    <i class="fas fa-code me-2"></i>Programmer Profile
                   </a>
                 </div>
-                <div class="btn-wrapper">
-                  <a href="analista.html" class="btn btn-outline-info btn-lg w-100">
-                    <i class="fas fa-chart-line me-2"></i> Perfil Analista de Datos
+                <div class="btn-wrapper" data-en='<a href="analista.html" class="btn btn-outline-info btn-lg w-100"><i class="fas fa-chart-line me-2"></i> Data Analyst Profile</a>'
+                    data-es='<a href="analista.html" class="btn btn-outline-info btn-lg w-100"><i class="fas fa-chart-line me-2"></i> Perfil Analista de Datos</a>'>
+                  <a href="analista.html" class="btn btn-outline-info btn-lg w-100" >
+                    <i class="fas fa-chart-line me-2"></i>Data Analyst Profile
                   </a>
                 </div>
         </div>
@@ -68,5 +73,23 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/typingEffect.js"></script>
+
+<!-- Botón flotante de idioma -->
+<button id="lang-toggle" class="btn btn-sm btn-outline-info position-fixed m-3" style="bottom: 0; left: 0; z-index: 9999;">
+    Español
+</button>
+
+<script>
+document.getElementById("lang-toggle").addEventListener("click", function () {
+  const elements = document.querySelectorAll("[data-en][data-es]");
+  const toSpanish = this.textContent === "Español";
+  elements.forEach(el => {
+    el.innerHTML = toSpanish ? el.dataset.es : el.dataset.en;
+  });
+  this.textContent = toSpanish ? "English" : "Español";
+});
+</script>
+
 </body>
+
 </html>
