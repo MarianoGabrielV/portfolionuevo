@@ -69,26 +69,19 @@
     </section>
     
     
+    <!-- Botón flotante de idioma -->
+    <button id="lang-toggle" class="btn btn-sm btn-outline-info position-fixed m-3" style="bottom: 0; left: 0; z-index: 9999;">
+        Español
+    </button>
+    
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/typingEffect.js"></script>
+    <script src="js/lang-toggle.js" defer></script>
 
-<!-- Botón flotante de idioma -->
-<button id="lang-toggle" class="btn btn-sm btn-outline-info position-fixed m-3" style="bottom: 0; left: 0; z-index: 9999;">
-    Español
-</button>
 
-<script>
-document.getElementById("lang-toggle").addEventListener("click", function () {
-  const elements = document.querySelectorAll("[data-en][data-es]");
-  const toSpanish = this.textContent === "Español";
-  elements.forEach(el => {
-    el.innerHTML = toSpanish ? el.dataset.es : el.dataset.en;
-  });
-  this.textContent = toSpanish ? "English" : "Español";
-});
-</script>
+
 
 </body>
 
